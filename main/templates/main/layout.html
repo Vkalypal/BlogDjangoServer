@@ -1,0 +1,24 @@
+{% load static %} <!-- подключение статических файлов из папки static. Для этого создали папку static в приложении -->
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}"> <!-- указываем путь к css файлу -->
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="{% url 'home' %}">Домой</a> <!-- адрес по имени ссылки из файла urls -->
+        <a href="{% url 'news_home' %}">Новости</a>
+        <a href="{% url 'contacts' %}">Контакты</a>
+        <a href="">Об нас</a>
+    </div>
+    <main>
+        {% block content %} <!-- Шаблонизатор джинжа. block - ключевое слово -->
+        {% endblock %}
+    </main>
+</body>
+</html>
