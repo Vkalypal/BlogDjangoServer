@@ -9,8 +9,8 @@ class Articles(models.Model):
     full_text = models.TextField('Статья')
     date = models.DateTimeField('Дата публикации')
 
-    def __str__(self):
-        return self.title
+    def __str__(self):    # Метод отображения содержимого базы
+        return f'Новость: {self.title}'
 
     class Meta:
         verbose_name = 'Новость'

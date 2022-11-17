@@ -68,3 +68,48 @@ main .features h1{
 main .features p{
     font-size: 20px;
 }
+
+main .news-blog h3{
+    font-size: 25px;
+}
+main .news-blog{
+    background-color: #e4f0ef;
+    display-block: inline;
+    float: left;
+    width: 40%;
+    height: 300px;
+    border: solid #5b5b5b 5px;
+    padding: 20px 20px;
+    margin: 0px 10px 10px 10px;
+}
+form input{
+    font-size: 15px;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+form textarea{
+    font-size: 15px;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+form button{
+    font-size: 15px;
+    width: 40%;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

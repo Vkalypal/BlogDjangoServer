@@ -13,8 +13,8 @@
     <div class="topnav">
         <a class="active" href="{% url 'home' %}">Домой</a> <!-- адрес по имени ссылки из файла urls -->
         <a href="{% url 'news_home' %}">Новости</a>
+        <a href="{% url 'create' %}">Добавить запись</a>
         <a href="{% url 'contacts' %}">Контакты</a>
-        <a href="">Об нас</a>
     </div>
     <main>
         {% block content %} <!-- Шаблонизатор джинжа. block - ключевое слово -->

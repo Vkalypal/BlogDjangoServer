@@ -4,9 +4,12 @@
 {% block content %}
     <div class="features">
         <h1>Новости</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Distinctio dolore expedita facilis harum iusto maxime nemo
-            nihil, nisi nulla numquam omnis quam quas
-            quasi quibusdam recusandae sapiente sequi ullam velit.</p>
+        {% for el in news %}    <!-- Перебираем статьи из файла views метода news_home -->
+            <div class="news-blog">   <!-- который возвращает значения базы в переменной news -->
+                <h3>{{ el.title }}</h3>  <!-- Вывод заголовка и анонса статьи -->
+                <br>
+                <p>{{ el.anons }}</p>   <!-- названия из файла models -->
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
