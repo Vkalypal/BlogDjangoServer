@@ -4,11 +4,12 @@
 {% block content %}
     <div class="features">
         <h1>Форма по добавлению статьи</h1>
-        <form method="post">
+        <form method="post" enctype="multipart/form-data"> <!-- добавил enctype -->
             {% csrf_token %}<br> <!-- подключается для клика по кнопке -->
             {{ form.title }}<br> <!-- Выводим объект form из метода create файла views -->
             {{ form.anons }}<br>
             {{ form.full_text }}<br>
+            {{ form.imageBlog }}<br>
             {{ form.date }}<br>
             <span>{{ error }}</span>
 

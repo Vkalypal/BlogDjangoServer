@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
-from .models import Articles # Импортируем из файла models класс Articles
+from .models import Articles  # Импортируем из файла models класс Articles
 from .forms import ArticlesForm # Импортируем из файла forms класс ArticlesForm
+
+
 # Create your views here.
 
 
@@ -12,7 +14,8 @@ def news_home(request):
 def create(request):
     error = ''
     if request.method == 'POST': # Если метод передачи данных POST, то есть из формы то
-        form = ArticlesForm(request.POST) # Записываем данные которые пришли из формы в объект form
+        form = ArticlesForm(request.POST, request.FILES) # записываем данные которые пришли из формы в объект form
+        # request.FILES для передачи картинок
         if form.is_valid():  # Если все данные полей корректно заполнены
             form.save()      # то сохраняем данные в базу
             return redirect('home') # переадресация на страницу home

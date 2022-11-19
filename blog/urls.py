@@ -23,4 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')), # При переходе на главную страницу обращаемся к main.urls
     path('news/', include('news.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Подключение статических файлов, без этого работает, но нужно для сервера?
+]# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Подключение статических файлов, без этого работает, но нужно для сервера?
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
