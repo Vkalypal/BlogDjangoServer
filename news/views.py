@@ -18,7 +18,7 @@ def create(request):
         # request.FILES для передачи картинок
         if form.is_valid():  # Если все данные полей корректно заполнены
             form.save()      # то сохраняем данные в базу
-            return redirect('home') # переадресация на страницу home
+            return redirect('news_home') # переадресация на страницу home
         else:
             error = 'Форма заполнена неверно'
     form = ArticlesForm()  # Создаем объект на основе класса ArticlesForm

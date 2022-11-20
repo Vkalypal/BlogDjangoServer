@@ -1,15 +1,14 @@
 {% extends 'main/layout.html' %} <!-- указываем от какго файла наследуем шаблонизатор джинжа -->
 
-{% block title %}Новости{% endblock %}
+{% block title %}Ваша хуйня{% endblock %}
 {% block content %}
     <div class="features">
-        <h1>Новости</h1>
+        <h1>Ваша хуйня</h1>
         {% for el in news %}    <!-- Перебираем статьи из файла views метода news_home -->
             <div class="news-blog">   <!-- который возвращает значения базы в переменной news -->
                 <h3>{{ el.title }}</h3>  <!-- Вывод заголовка и анонса статьи -->
                 <br>
                 <img src="{{ el.imageBlog.url }}">
-                <p>{{ el.anons }}</p>   <!-- названия из файла models -->
             </div>
         {% endfor %}
     </div>

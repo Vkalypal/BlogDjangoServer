@@ -1,19 +1,17 @@
 {% extends 'main/layout.html' %} <!-- указываем от какго файла наследуем шаблонизатор джинжа -->
 
-{% block title %}Форма по добавлению статьи{% endblock %}
+{% block title %}Добавление фото{% endblock %}
 {% block content %}
     <div class="features">
-        <h1>Форма по добавлению статьи</h1>
+        <h1>Загружай свою хуйню</h1>
         <form method="post" enctype="multipart/form-data"> <!-- добавил enctype -->
             {% csrf_token %}<br> <!-- подключается для клика по кнопке -->
             {{ form.title }}<br> <!-- Выводим объект form из метода create файла views -->
-            {{ form.anons }}<br>
-            {{ form.full_text }}<br>
             {{ form.imageBlog }}<br>
             {{ form.date }}<br>
             <span>{{ error }}</span>
 
-            <button type="submit">Добавить статью</button>
+            <button type="submit">Добавить</button>
         </form>
     </div>
 {% endblock %}

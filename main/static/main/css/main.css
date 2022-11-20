@@ -70,18 +70,24 @@ main .features p{
 }
 
 main .news-blog h3{
-    font-size: 25px;
+    font-size: 20px;
 }
 main .news-blog{
+    float: left;
     background-color: #e4f0ef;
     display-block: inline;
-    float: left;
-    width: 40%;
-    height: 300px;
+    overflow: hidden;
+    width: 400px;
+    height: 550px;
     border: solid #5b5b5b 5px;
-    padding: 20px 20px;
+    padding: 20px 20px 20px 20px;
     margin: 0px 10px 10px 10px;
 }
+main .news-blog img{
+    width: 100%;
+
+}
+
 form input{
     font-size: 15px;
     width: 40%;
